@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Trivia 2"
+rootProject.name = "Clonify"
 include ':app'
