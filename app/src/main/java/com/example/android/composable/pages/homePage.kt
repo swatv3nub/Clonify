@@ -189,6 +189,68 @@ fun HomePageGeneration() {
                         )
                     }
                 }
+                Column(modifier = Modifier.padding(top = 25.dp)) {
+                    Text(text = "Audiobooks",
+                        color = Color.White,
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.SansSerif
+                    )
+                }
+                Row() {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.hitler), contentDescription = null,
+                            modifier = Modifier.size(height = 120.dp, width = 120.dp))
+                        Text(text = "Hitler baba",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White)
+                    }
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.tate), contentDescription = null,
+                            modifier = Modifier.size(height = 120.dp, width = 100.dp))
+                        Text(text = "Tate baba",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White)
+                    }
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            modifier = Modifier.height(120.dp))
+                        Text(text = "Raku Da",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White
+                        )
+                    }
+                }
+                Column(modifier = Modifier.padding(top = 25.dp)) {
+                    Text(text = "Shows to Try",
+                        color = Color.White,
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.SansSerif
+                    )
+                }
+                Row() {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.hitler), contentDescription = null,
+                            modifier = Modifier.size(height = 120.dp, width = 120.dp))
+                        Text(text = "Hitler baba",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White)
+                    }
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.tate), contentDescription = null,
+                            modifier = Modifier.size(height = 120.dp, width = 100.dp))
+                        Text(text = "Tate baba",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White)
+                    }
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            modifier = Modifier.height(120.dp))
+                        Text(text = "Raku Da",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White
+                        )
+                    }
+                }
             }
             
         }
