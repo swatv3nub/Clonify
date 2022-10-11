@@ -21,6 +21,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.motionEventSpy
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import com.example.android.composable.R
@@ -60,11 +61,11 @@ fun HomePageGeneration() {
             Column(verticalArrangement = Arrangement.Top,
             modifier = Modifier.padding(15.dp)) {
                 Text("Welcome to Clonify",
-                    fontSize = 20.sp,
+                    fontSize = 26.sp,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.Bold,
                     color = Color.White,
-                    modifier = Modifier.padding(top = 20.dp)
+                    modifier = Modifier.padding(vertical = 15.dp)
                 )
                 Row(verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
@@ -103,10 +104,12 @@ fun HomePageGeneration() {
                                 .pointerInteropFilter {
                                     when (it.action) {
                                         MotionEvent.ACTION_DOWN -> {
-                                            color.value = Color(0xFF3700B3) }
+                                            color.value = Color(0xFF3700B3)
+                                        }
 
-                                        MotionEvent.ACTION_UP  -> {
-                                            color.value =  Color(0xFFBB86FC)}
+                                        MotionEvent.ACTION_UP -> {
+                                            color.value = Color(0xFFBB86FC)
+                                        }
                                     }
                                     true
                                 },
@@ -156,7 +159,35 @@ fun HomePageGeneration() {
                     }
                 }
                 Column(modifier = Modifier.padding(top = 25.dp)) {
-
+                    Text(text = "Motivational Speech",
+                    color = Color.White,
+                    fontSize = 25.sp,
+                    fontFamily = FontFamily.SansSerif
+                    )
+                }
+                Row() {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.hitler), contentDescription = null,
+                            modifier = Modifier.size(height = 120.dp, width = 120.dp))
+                        Text(text = "Hitler baba",
+                            fontFamily = FontFamily.SansSerif,
+                        color = Color.White)
+                    }
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.tate), contentDescription = null,
+                            modifier = Modifier.size(height = 120.dp, width = 100.dp))
+                        Text(text = "Tate baba",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White)
+                    }
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            modifier = Modifier.height(120.dp))
+                        Text(text = "Raku Da",
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White
+                        )
+                    }
                 }
             }
             
