@@ -3,12 +3,12 @@ package com.example.android.composable
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+
+import androidx.compose.runtime.*
+
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.android.composable.pages.HomePage
+import com.example.android.composable.pages.OnboardingScreen
+
 import com.example.android.composable.ui.theme.composableTheme
 
 class MainActivity : ComponentActivity() {
@@ -16,24 +16,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             composableTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    defaultPage()
+                var showOnboarding by remember {
+                    mutableStateOf(true)
+                }
+                if (showOnboarding) {
+                    OnboardingScreen(onContinueClicked = { showOnboarding = false})
+                } else {
+                    MainScreen()
                 }
             }
         }
     }
 }
 
-@Composable
-fun defaultPage() {
-    HomePage()
-}
 
 @Preview
 @Composable
 fun Preeeeee(){
-    defaultPage()
+    composableTheme() {
+        MainScreen()
+    }
+
 }

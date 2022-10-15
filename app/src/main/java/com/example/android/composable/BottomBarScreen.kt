@@ -1,28 +1,28 @@
 package com.example.android.composable
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class BottomBarScreen(
-    var route: String,
-    var title: String,
-    var icon: ImageVector
+    val route: String,
+    val title: String,
+    val icon: ImageVector
 ) {
-    object MainScreen : BottomBarScreen(
-        route = "MainScreen",
+    object Home : BottomBarScreen(
+        route = "home",
         title = "Home",
         icon = Icons.Default.Home
     )
+
     object Search : BottomBarScreen(
-        route = "Search",
+        route = "search",
         title = "Search",
         icon = Icons.Default.Search
     )
+
     object Library : BottomBarScreen(
-        route = "Library",
+        route = "library",
         title = "Library",
         icon = Icons.Default.List
     )
