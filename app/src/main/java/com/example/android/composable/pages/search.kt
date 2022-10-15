@@ -15,8 +15,10 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -29,17 +31,17 @@ import com.example.android.composable.ui.theme.composableTheme
 @Composable
 fun Search() {
     composableTheme() {
+        Image(painter = painterResource(id = R.drawable.bg),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxSize(),
+            contentScale = ContentScale.FillBounds)
         Box {
-            Image(painter = painterResource(id = R.drawable.bg),
-                contentDescription = null,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight())
             Column(modifier = Modifier.padding(horizontal = 15.dp)) {
                 val textState = remember { mutableStateOf(TextFieldValue("")) }
                 Spacer(modifier = Modifier.height(15.dp))
                 SearchView(state = textState)
-                Spacer(modifier = Modifier.height(300.dp))
+                Spacer(modifier = Modifier.height(420.dp))
                 BodyElements()
             }
         }
@@ -48,20 +50,24 @@ fun Search() {
 
 @Composable
 fun SearchView(state: MutableState<TextFieldValue>) {
-    Card(elevation = 20.dp,) {
+    Text("Search",
+        color = Color.White,
+        fontSize = 45.sp,
+
+        modifier = Modifier.padding(95.dp, 50.dp, 90.dp, 20.dp)
+    )
+    Card() {
         TextField(
             value = state.value,
             onValueChange = { value ->
                 state.value = value
             },
-            placeholder = { Text(text = "Search for a Song!",
+            placeholder = { Text(text = "Artists, songs or podcasts",
                 modifier = Modifier
                     .alpha(ContentAlpha.disabled),
                 color = Color.Black) },
             modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(5.dp))
-                .shadow(elevation = 10.dp),
+                .fillMaxWidth(),
             textStyle = TextStyle(color = Color.Black, fontSize = 18.sp),
             leadingIcon = {
                 Icon(
@@ -69,7 +75,7 @@ fun SearchView(state: MutableState<TextFieldValue>) {
                     contentDescription = "",
                     tint = Color.DarkGray,
                     modifier = Modifier
-                        .padding(15.dp)
+                        .padding(start = 23.dp)
                         .size(24.dp)
                 )
             },

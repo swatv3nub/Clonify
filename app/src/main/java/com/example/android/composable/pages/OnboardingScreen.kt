@@ -42,7 +42,8 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
                     "This is not an Exact Clone due to some limitations!",
                 textAlign = TextAlign.Center,
                 fontSize = 19.sp,
-                modifier = Modifier.padding(horizontal = 8.dp)
+                modifier = Modifier.padding(horizontal = 8.dp),
+                color = Color.White
             )
         }
         Column(modifier = Modifier.fillMaxSize(),

@@ -1,28 +1,24 @@
 package com.example.android.composable.pages
 
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.horizontalScroll
+import android.widget.Toast
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.List
-
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,21 +28,24 @@ import com.example.android.composable.R
 import com.example.android.composable.ui.theme.composableTheme
 
 
+
 @Composable
 fun HomePage() {
+    val context = LocalContext.current
     composableTheme {
         Image(painter = painterResource(id = R.drawable.bg),
             contentDescription = null,
             modifier = Modifier
                 .fillMaxSize(),
             contentScale = ContentScale.FillBounds)
-        Box(modifier = Modifier.verticalScroll(rememberScrollState())) {
+        Box(modifier = Modifier
+            .verticalScroll(rememberScrollState())
+            ) {
             Column(verticalArrangement = Arrangement.Top,
             modifier = Modifier.padding(15.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text("Welcome to Clonify",
                         fontSize = 26.sp,
-                        fontFamily = FontFamily.Monospace,
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
                         modifier = Modifier.padding(vertical = 15.dp)
@@ -135,49 +134,86 @@ fun HomePage() {
                 Column(modifier = Modifier.padding(top = 25.dp)) {
                     Text(text = "Rock Bands",
                     color = Color.White,
-                    fontSize = 25.sp,
-                    fontFamily = FontFamily.SansSerif
+                    fontSize = 25.sp
                     )
                 }
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Row(modifier = Modifier.padding(top = 10.dp)) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Rock bands",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    }
+                            )
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Rock bands",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Rock bands",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Rock bands",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Rock bands",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -187,48 +223,87 @@ fun HomePage() {
                     Text(text = "Audiobooks",
                         color = Color.White,
                         fontSize = 25.sp,
-                        fontFamily = FontFamily.SansSerif
                     )
                 }
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Row(modifier = Modifier.padding(top = 10.dp)) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Audiobooks",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Audiobooks",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Audiobooks",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Audiobooks",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Audiobooks",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -237,49 +312,88 @@ fun HomePage() {
                 Column(modifier = Modifier.padding(top = 25.dp)) {
                     Text(text = "Shows to Try",
                         color = Color.White,
-                        fontSize = 25.sp,
-                        fontFamily = FontFamily.SansSerif
+                        fontSize = 25.sp
                     )
                 }
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Row(modifier = Modifier.padding(top = 10.dp)) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Shows to Try",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Shows to Try",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Shows to Try",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Shows to Try",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
-                                modifier = Modifier.height(120.dp))
+                                modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Shows to Try",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    })
                             Text(text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -289,7 +403,6 @@ fun HomePage() {
                     Text(text = "Old Hits",
                         color = Color.White,
                         fontSize = 25.sp,
-                        fontFamily = FontFamily.SansSerif
                     )
                 }
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
@@ -299,10 +412,18 @@ fun HomePage() {
                                 painter = painterResource(id = R.drawable.rakuda),
                                 contentDescription = null,
                                 modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Old Hits",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    }
                             )
                             Text(
                                 text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -311,10 +432,18 @@ fun HomePage() {
                                 painter = painterResource(id = R.drawable.rakuda),
                                 contentDescription = null,
                                 modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Old Hits",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    }
                             )
                             Text(
                                 text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -323,10 +452,18 @@ fun HomePage() {
                                 painter = painterResource(id = R.drawable.rakuda),
                                 contentDescription = null,
                                 modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Old Hits",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    }
                             )
                             Text(
                                 text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -335,10 +472,18 @@ fun HomePage() {
                                 painter = painterResource(id = R.drawable.rakuda),
                                 contentDescription = null,
                                 modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Old Hits",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    }
                             )
                             Text(
                                 text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
@@ -347,15 +492,24 @@ fun HomePage() {
                                 painter = painterResource(id = R.drawable.rakuda),
                                 contentDescription = null,
                                 modifier = Modifier.height(120.dp)
+                                    .clickable {
+                                        Toast
+                                            .makeText(
+                                                context,
+                                                "Old Hits",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                    }
                             )
                             Text(
                                 text = "Raku Da",
-                                fontFamily = FontFamily.SansSerif,
+                                
                                 color = Color.White
                             )
                         }
                     }
                 }
+                Spacer(modifier = Modifier.padding(top = 68.dp))
                 }
             }
             
