@@ -132,7 +132,7 @@ fun HomePage() {
                     }
                 }
                 Column(modifier = Modifier.padding(top = 25.dp)) {
-                    Text(text = "Rock Bands",
+                    Text(text = "Rock/Metal Bands",
                     color = Color.White,
                     fontSize = 25.sp
                     )
@@ -140,79 +140,79 @@ fun HomePage() {
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Row(modifier = Modifier.padding(top = 10.dp)) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bandlinkinpark), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Rock bands",
+                                                "Linkin Park",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     }
                             )
-                            Text(text = "Raku Da",
+                            Text(text = "Linkin Park",
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bandslipknot), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Rock bands",
+                                                "SlipKnot",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "SlipKnot",
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bandavengedsevenfold), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Rock bands",
+                                                "Avenged Sevenfold",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Avenged Sevenfold",
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.banklimpbizkit), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Rock bands",
+                                                "Limp Bizkit",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Limp Bizkit",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bandmetallica), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Rock bands",
+                                                "Metallica",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Metallica",
                                 
                                 color = Color.White
                             )
@@ -220,7 +220,7 @@ fun HomePage() {
                     }
                 }
                 Column(modifier = Modifier.padding(top = 25.dp)) {
-                    Text(text = "Audiobooks",
+                    Text(text = "Pop",
                         color = Color.White,
                         fontSize = 25.sp,
                     )
@@ -228,81 +228,81 @@ fun HomePage() {
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Row(modifier = Modifier.padding(top = 10.dp)) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bandbackstreetboys), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Audiobooks",
+                                                "Backstreet Boys",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Backstreet Boys",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.justinbieber), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Audiobooks",
+                                                "Justin Bieber",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Justin Bieber",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bts), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Audiobooks",
+                                                "BTS",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "BTS",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.bandmaroon5), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Audiobooks",
+                                                "Maroon 5",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Maroon 5",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.edsheeran), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Audiobooks",
+                                                "Ed Sheeran",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Ed Sheeran",
                                 
                                 color = Color.White
                             )
@@ -310,7 +310,7 @@ fun HomePage() {
                     }
                 }
                 Column(modifier = Modifier.padding(top = 25.dp)) {
-                    Text(text = "Shows to Try",
+                    Text(text = "MTV Hustle 2.0",
                         color = Color.White,
                         fontSize = 25.sp
                     )
@@ -318,198 +318,88 @@ fun HomePage() {
                 Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Row(modifier = Modifier.padding(top = 10.dp)) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.epriyer), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Shows to Try",
+                                                "EPR Iyer",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "EPR Iyer",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.gd47), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Shows to Try",
+                                                "GD 47",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "GD 47",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.paradox), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Shows to Try",
+                                                "Paradox",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "paradox",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.gravity), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Shows to Try",
+                                                "Gravity",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Gravity",
                                 
                                 color = Color.White
                             )
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(painter = painterResource(id = R.drawable.rakuda), contentDescription = null,
+                            Image(painter = painterResource(id = R.drawable.shrusti), contentDescription = null,
                                 modifier = Modifier.height(120.dp)
                                     .clickable {
                                         Toast
                                             .makeText(
                                                 context,
-                                                "Shows to Try",
+                                                "Shrusti",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                     })
-                            Text(text = "Raku Da",
+                            Text(text = "Shrusti",
                                 
                                 color = Color.White
                             )
                         }
                     }
                 }
-                Column(modifier = Modifier.padding(top = 25.dp)) {
-                    Text(text = "Old Hits",
-                        color = Color.White,
-                        fontSize = 25.sp,
-                    )
-                }
-                Column(modifier = Modifier.horizontalScroll(rememberScrollState())) {
-                    Row(modifier = Modifier.padding(top = 10.dp)) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(
-                                painter = painterResource(id = R.drawable.rakuda),
-                                contentDescription = null,
-                                modifier = Modifier.height(120.dp)
-                                    .clickable {
-                                        Toast
-                                            .makeText(
-                                                context,
-                                                "Old Hits",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                    }
-                            )
-                            Text(
-                                text = "Raku Da",
-                                
-                                color = Color.White
-                            )
-                        }
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(
-                                painter = painterResource(id = R.drawable.rakuda),
-                                contentDescription = null,
-                                modifier = Modifier.height(120.dp)
-                                    .clickable {
-                                        Toast
-                                            .makeText(
-                                                context,
-                                                "Old Hits",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                    }
-                            )
-                            Text(
-                                text = "Raku Da",
-                                
-                                color = Color.White
-                            )
-                        }
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(
-                                painter = painterResource(id = R.drawable.rakuda),
-                                contentDescription = null,
-                                modifier = Modifier.height(120.dp)
-                                    .clickable {
-                                        Toast
-                                            .makeText(
-                                                context,
-                                                "Old Hits",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                    }
-                            )
-                            Text(
-                                text = "Raku Da",
-                                
-                                color = Color.White
-                            )
-                        }
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(
-                                painter = painterResource(id = R.drawable.rakuda),
-                                contentDescription = null,
-                                modifier = Modifier.height(120.dp)
-                                    .clickable {
-                                        Toast
-                                            .makeText(
-                                                context,
-                                                "Old Hits",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                    }
-                            )
-                            Text(
-                                text = "Raku Da",
-                                
-                                color = Color.White
-                            )
-                        }
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Image(
-                                painter = painterResource(id = R.drawable.rakuda),
-                                contentDescription = null,
-                                modifier = Modifier.height(120.dp)
-                                    .clickable {
-                                        Toast
-                                            .makeText(
-                                                context,
-                                                "Old Hits",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                    }
-                            )
-                            Text(
-                                text = "Raku Da",
-                                
-                                color = Color.White
-                            )
-                        }
-                    }
-                }
-                Spacer(modifier = Modifier.padding(top = 68.dp))
+                Spacer(modifier = Modifier.padding(top = 48.dp))
                 }
             }
             
