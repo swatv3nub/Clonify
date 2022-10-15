@@ -8,6 +8,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -19,6 +20,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalContext
@@ -75,25 +77,76 @@ fun Library() {
                         modifier = Modifier.padding(top = 6.5.dp)
                     )
                 }
+                Spacer(modifier = Modifier.height(10.dp))
                 Row(modifier = Modifier
                     .fillMaxWidth()
                     .clickable {
                         Toast
                             .makeText(
                                 context,
-                                "Create a new Playlist",
+                                "Liked Songs",
                                 Toast.LENGTH_SHORT
                             )
                             .show()
                     }) {
                     Image(
-                        imageVector = Icons.Default.Add,
+                        imageVector = Icons.Default.Favorite,
                         contentDescription = null,
                         colorFilter = ColorFilter.tint(color = Color.White),
                         modifier = Modifier.size(50.dp)
                     )
                     Spacer(modifier = Modifier.padding(horizontal = 10.dp))
-                    Text(text = "Create Playlist",
+                    Text(text = "Liked Songs",
+                        color = Color.White,
+                        fontSize = 30.sp,
+                        modifier = Modifier.padding(top = 6.5.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.height(10.dp))
+                Row(modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        Toast
+                            .makeText(
+                                context,
+                                "Linkin Park Playlist",
+                                Toast.LENGTH_SHORT
+                            )
+                            .show()
+                    }) {
+                    Image(
+                        painter = painterResource(id = R.drawable.linkinpark),
+                        contentDescription = null,
+                        colorFilter = ColorFilter.tint(color = Color.White),
+                        modifier = Modifier.size(45.dp).padding(top = 8.dp)
+                    )
+                    Spacer(modifier = Modifier.padding(horizontal = 12.dp))
+                    Text(text = "Linkin Park",
+                        color = Color.White,
+                        fontSize = 30.sp,
+                        modifier = Modifier.padding(top = 6.5.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.height(10.dp))
+                Row(modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        Toast
+                            .makeText(
+                                context,
+                                "Avenged Sevenfold Playlist",
+                                Toast.LENGTH_SHORT
+                            )
+                            .show()
+                    }) {
+                    Image(
+                        painter = painterResource(id = R.drawable.avengedsevenfold),
+                        contentDescription = null,
+                        colorFilter = ColorFilter.tint(color = Color.White),
+                        modifier = Modifier.size(50.dp).padding(top = 8.dp)
+                    )
+                    Spacer(modifier = Modifier.padding(horizontal = 12.dp))
+                    Text(text = "Avenged Sevenfold",
                         color = Color.White,
                         fontSize = 30.sp,
                         modifier = Modifier.padding(top = 6.5.dp)
