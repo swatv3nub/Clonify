@@ -1,39 +1,27 @@
 package com.example.android.composable.pages
 
-import android.view.MotionEvent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.compose.rememberNavController
-import com.example.android.composable.BottomBar
-import com.example.android.composable.BottomBarScreen
-import com.example.android.composable.BottomNavGraph
 import com.example.android.composable.R
 import com.example.android.composable.ui.theme.composableTheme
 
@@ -67,11 +55,12 @@ fun SearchView(state: MutableState<TextFieldValue>) {
                 state.value = value
             },
             placeholder = { Text(text = "Search for a Song!",
+                modifier = Modifier
+                    .alpha(ContentAlpha.disabled),
                 color = Color.Black) },
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(5.dp))
-                .background(color = Color.Black)
                 .shadow(elevation = 10.dp),
             textStyle = TextStyle(color = Color.Black, fontSize = 18.sp),
             leadingIcon = {
@@ -102,7 +91,7 @@ fun BodyElements() {
     Text("Type a Song Name, Artist name, or Album name in the Search box" +
     "Or Listen to your playlists in the Library Page next to this!",
     textAlign = TextAlign.Center,
-    color = Color.White)
+    color = Color.White,)
 }
 
 @Preview

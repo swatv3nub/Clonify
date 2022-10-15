@@ -5,7 +5,7 @@ Spotify Clone with a twist
 ## Dependencies
 
 - Compose
-- Navigation UI
+- Navigation Compose
 
 ## How to run
 

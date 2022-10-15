@@ -32,8 +32,8 @@ class MainActivity : ComponentActivity() {
 
 @Preview
 @Composable
-fun Preeeeee(){
-    composableTheme() {
+fun Pre(){
+    composableTheme {
         MainScreen()
     }
 
