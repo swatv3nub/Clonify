@@ -393,7 +393,6 @@ fun HomePage() {
                                             ).show()
                                     })
                             Text(text = "Shrusti",
-                                
                                 color = Color.White
                             )
                         }
